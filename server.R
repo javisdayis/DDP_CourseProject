@@ -2,6 +2,7 @@ library(shiny)
 library(TTR)
 library(xts)
 library(quantmod)
+library(forecast)
 #Get cuotes of the assets
 tickers <- c("^GSPC", "AAPL", "MSFT", "GOOG", "^IBEX")
 getSymbols(tickers) 

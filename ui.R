@@ -1,10 +1,14 @@
 library(shiny)
+library(TTR)
+library(xts)
+library(quantmod)
+library(forecast)
 shinyUI(pageWithSidebar(
   # Application title
   headerPanel("Magic Trade"),
   # Sidebar with controls to select the asset to plot
   sidebarPanel(
-    sliderInput('date', 'Data frame:', min = 2010, max = 2014, value = c(2010, 2014),
+    sliderInput('date', 'Time frame:', min = 2010, max = 2014, value = c(2010, 2014),
                 format="####",step = 1,round=FALSE,ticks=TRUE),
     selectInput('asset', 'Asset:',
                 list("S&P 500" = "sp",
